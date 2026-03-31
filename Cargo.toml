@@ -1,0 +1,25 @@
+[package]
+name = "dora-cat"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+description = "Dataflow-oriented robotic architecture built on comp-cat-rs and tarpc-cat"
+keywords = ["robotics", "dataflow", "category-theory", "effects", "rpc"]
+categories = ["science::robotics", "network-programming"]
+repository = "https://github.com/MavenRain/dora-cat"
+
+[dependencies]
+comp-cat-rs = "0.5"
+tarpc-cat = { path = "../tarpc-cat" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[lints.clippy]
+all = { level = "deny", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+needless_pass_by_value = "warn"
+manual_map = "warn"
+# Project convention: prefer iterator combinators over for loops.
+needless_for_each = "allow"
+# Project convention: prefer .map() combinators over matching on Option.
+option_map_unit_fn = "allow"
