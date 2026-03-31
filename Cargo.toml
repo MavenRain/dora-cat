@@ -10,7 +10,7 @@ repository = "https://github.com/MavenRain/dora-cat"
 
 [dependencies]
 comp-cat-rs = "0.5"
-tarpc-cat = { path = "../tarpc-cat" }
+tarpc-cat = "0.1"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 
